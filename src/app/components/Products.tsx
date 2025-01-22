@@ -17,21 +17,23 @@ interface Product {
 
 export default function Products() {
     const [products, setProducts] = useState<Product[]>([])
-    const [isLoading, setIsLoading] = useState(true) // Estado de carregamento
+    const [isLoading, setIsLoading] = useState(true)
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false)
     const [currentProduct, setCurrentProduct] = useState<Product | null>(null)
+
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || ""
 
     useEffect(() => {
         fetchProducts()
     }, [])
 
     const fetchProducts = async () => {
-        setIsLoading(true) // Inicia o carregamento
-        const res = await fetch("/api/products")
+        setIsLoading(true)
+        const res = await fetch(`${baseUrl}/api/products`) 
         const data = await res.json()
         setProducts(data)
-        setIsLoading(false) // Finaliza o carregamento
+        setIsLoading(false)
     }
 
     const openModal = (product: Product | null = null) => {
@@ -56,7 +58,7 @@ export default function Products() {
 
     const handleDelete = async () => {
         if (currentProduct) {
-            await fetch(`/api/products/${currentProduct.id}`, { method: "DELETE" })
+            await fetch(`${baseUrl}/api/products/${currentProduct.id}`, { method: "DELETE" })
             await fetchProducts()
             closeDeleteModal()
         }

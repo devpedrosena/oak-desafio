@@ -30,6 +30,8 @@ export default function ProductModal({ product, onClose, onProductSaved }: Produ
         available: true,
     })
 
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || ""  // Usando a variável de ambiente
+
     useEffect(() => {
         if (product) {
             setFormData(product)
@@ -47,7 +49,7 @@ export default function ProductModal({ product, onClose, onProductSaved }: Produ
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault()
-        const url = product ? `/api/products/${product.id}` : "/api/products"
+        const url = product ? `${baseUrl}/api/products/${product.id}` : `${baseUrl}/api/products`  // Usando a URL de produção
         const method = product ? "PUT" : "POST"
 
         await fetch(url, {
@@ -105,4 +107,3 @@ export default function ProductModal({ product, onClose, onProductSaved }: Produ
         </Dialog>
     )
 }
-
