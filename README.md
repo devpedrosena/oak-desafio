@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oak Tecnologia - Desafio de Estágio
 
-## Getting Started
+## Sobre o Projeto
 
-First, run the development server:
+Este é um projeto desenvolvido como parte de um desafio proposto pela empresa **OAK Tecnologia** para a vaga de Estágio em Desenvolvimento. O objetivo foi criar uma aplicação web com funcionalidades CRUD (Create, Read, Update, Delete) utilizando **Next.js**, **SQLite** e **TailwindCSS**.
 
+Desenvolvido por mim, **Pedro Henrique Sena**.
+- [LinkedIn](https://www.linkedin.com/in/pedrohsenna)
+- [GitHub](https://github.com/devpedrosena)
+
+---
+
+## Tecnologias Utilizadas
+
+- **Next.js** 14.2.23: Framework React para aplicações web.
+- **React** 18.3.1: Biblioteca para construção de interfaces.
+- **SQLite**: Banco de dados leve e simples, acessado com a biblioteca **better-sqlite3**.
+- **TailwindCSS** 3.4.1: Framework CSS para estilização.
+- **Shadcn UI**: Componentes acessíveis e pré-construídos para React.
+- **Lucide Icons**: Ícones minimalistas e modernos.
+- **TypeScript** 5: Superset do JavaScript com tipagem estática.
+
+---
+
+## Funcionalidades
+
+### CRUD de Produtos
+- **Listar Produtos**: Exibe todos os produtos cadastrados em uma tabela.
+- **Adicionar Produto**: Cria um novo produto com nome, descrição, preço e disponibilidade.
+- **Editar Produto**: Atualiza informações de um produto existente.
+- **Deletar Produto**: Remove um produto do banco de dados.
+
+### Melhorias Visuais
+- Tabela responsiva com suporte para dispositivos móveis.
+- Efeito de **blur** enquanto os dados estão sendo carregados.
+- Design moderno e responsivo com **TailwindCSS**.
+
+---
+
+## Como Rodar o Projeto
+
+### 1. Clone o repositório:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/devpedrosena/oak-desafio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 2. Instale as dependências:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 3. Inicie o servidor de desenvolvimento:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+O projeto estará disponível em [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura de Diretórios
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **/db**: Contém o arquivo SQLite.
+- **/components**: Componentes reutilizáveis como tabela e botões.
+- **/app/api**: Endpoints para interação com o banco de dados.
+- **/app**: Páginas principais da aplicação.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Scripts Disponíveis
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `npm run dev`: Inicia o servidor de desenvolvimento.
+- `npm run build`: Compila o projeto para produção.
+- `npm run start`: Inicia o servidor em produção.
+- `npm run lint`: Verifica e corrige problemas de lint no código.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Agradecimentos
+
+Agradeço à OAK Tecnologia pela oportunidade de realizar esse desafio e colocar em prática minhas habilidades em desenvolvimento web.
+
+Feito com 💻 e muita dedicação por Pedro Henrique Sena.
