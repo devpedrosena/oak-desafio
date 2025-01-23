@@ -1,5 +1,7 @@
 # Oak Tecnologia - Desafio de Estágio
 
+![Preview do Projeto](https://drive.google.com/uc?export=view&id=1GSAwChr8Mw_GgOpYXw4KtnCrbgxpdg06)
+
 ## Sobre o Projeto
 
 Este é um projeto desenvolvido como parte de um desafio proposto pela empresa **OAK Tecnologia** para a vaga de Estágio em Desenvolvimento. O objetivo foi criar uma aplicação web com funcionalidades CRUD (Create, Read, Update, Delete) utilizando **Next.js**, **SQLite** e **TailwindCSS**.
