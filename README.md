@@ -17,7 +17,6 @@ Desenvolvido por mim, **Pedro Henrique Sena**.
 - **SQLite**: Banco de dados leve e simples, acessado com a biblioteca **better-sqlite3**.
 - **TailwindCSS** 3.4.1: Framework CSS para estilização.
 - **Shadcn UI**: Componentes acessíveis e pré-construídos para React.
-- **Lucide Icons**: Ícones minimalistas e modernos.
 - **TypeScript** 5: Superset do JavaScript com tipagem estática.
 
 ---
@@ -49,7 +48,15 @@ git clone https://github.com/devpedrosena/oak-desafio.git
 npm install
 ```
 
-### 3. Inicie o servidor de desenvolvimento:
+### 3. Configure as variáveis de ambiente:
+Crie um arquivo .env.local na raiz do projeto e insira a seguinte variável:
+```bash
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+```
+Substitua o valor pelo domínio de produção ao implantar a aplicação.
+
+
+### 4. Inicie o servidor de desenvolvimento:
 ```bash
 npm run dev
 ```
